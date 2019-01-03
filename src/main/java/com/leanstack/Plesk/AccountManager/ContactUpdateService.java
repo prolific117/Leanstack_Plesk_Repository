@@ -28,16 +28,28 @@ public class ContactUpdateService extends BaseClass {
         
     }
     
-    public void createCustomerContact(String address, String city, String state,
+    public void updateCustomerContact(String address, String city, String state, String email, 
             String country, String postcode, String login) throws JAXBException, Exception{
         
         Map customerData = new LinkedHashMap();
         
-        customerData.put("address",address);
-        customerData.put("city",city);
-        customerData.put("state",state);
-        customerData.put("pcode", postcode);
-        customerData.put("country", country);
+        if(address != null)
+          customerData.put("address",address);
+        
+        if(city != null)
+           customerData.put("city",city);
+        
+        if(state != null)
+           customerData.put("state",state);
+        
+        if(postcode != null)
+           customerData.put("pcode", postcode);
+        
+        if(country != null)
+           customerData.put("country", country);
+        
+        if(email != null)
+           customerData.put("email", email);
         
         
         String request = "<packet version=\"1.6.7.0\">\n" +

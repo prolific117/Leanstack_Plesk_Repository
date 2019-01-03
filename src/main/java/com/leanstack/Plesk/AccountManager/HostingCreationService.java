@@ -46,6 +46,7 @@ public class HostingCreationService extends BaseClass{
         
         genInfoData.put("name", domainName);
         genInfoData.put("htype", "vrt_hst");
+        genInfoData.put("owner-id", pleskId);
         genInfoData.put("ip_address", this.getKA_SERVICE());
         genInfoData.put("status", 0);
         

@@ -13,59 +13,59 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author prolific
  */
      @XmlRootElement(name="result")
-                            public class Result {
+    public class Result {
 
-                                private String status;
-                                private String errcode;
-                                private String errtext;
-                                private String id;
-                                private String guid;
+        private String status;
+        private String errcode;
+        private String errtext;
+        private String id;
+        private String guid;
 
-                                public String getStatus() {
-                                    return status;
-                                }
+        public String getStatus() {
+            return status;
+        }
 
-                                @XmlElement
-                                public void setStatus(String status) {
-                                    this.status = status;
-                                }
+        @XmlElement
+        public void setStatus(String status) {
+            this.status = status;
+        }
 
-                                public String getErrcode() {
-                                    return errcode;
-                                }
+        public String getErrcode() {
+            return errcode;
+        }
 
-                                @XmlElement
-                                public void setErrcode(String errcode) {
-                                    this.errcode = errcode;
-                                }
+        @XmlElement
+        public void setErrcode(String errcode) {
+            this.errcode = errcode;
+        }
 
-                                public String getErrtext() {
-                                    return errtext;
-                                }
+        public String getErrtext() {
+            return errtext;
+        }
 
-                                @XmlElement
-                                public void setErrtext(String errtext) {
-                                    this.errtext = errtext;
-                                }
+        @XmlElement
+        public void setErrtext(String errtext) {
+            this.errtext = errtext;
+        }
 
-                                public String getId() {
-                                    return id;
-                                }
+        public String getId() {
+            return id;
+        }
 
-                                @XmlElement
-                                public void setId(String id) {
-                                    this.id = id;
-                                }
+        @XmlElement
+        public void setId(String id) {
+            this.id = id;
+        }
 
-                                public String getGuid() {
-                                    return guid;
-                                }
+        public String getGuid() {
+            return guid;
+        }
 
-                                @XmlElement
-                                public void setGuid(String guid) {
-                                    this.guid = guid;
-                                }
+        @XmlElement
+        public void setGuid(String guid) {
+            this.guid = guid;
+        }
 
 
 
-                            }
+    }
