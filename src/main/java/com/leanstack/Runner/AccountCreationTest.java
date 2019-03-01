@@ -16,8 +16,8 @@ import com.leanstack.Plesk.AccountManager.HostingCreationService;
 public class AccountCreationTest {
     
     public static void main(String[] args) throws Exception{
-        AccountCreationService service = new AccountCreationService("45.77.89.231","admin","Lean@stack-123");
-        Result res = service.createCustomerAccount("47", "thethetunjicom","theylll",  "Monthly1@4", "prolificeffects@gmail.com");
+        AccountCreationService service = new AccountCreationService("206.189.123.56","admin","Admin@Leanstack-123");
+        Result res = service.createCustomerAccount("TTeej", "thethetunjicoe","theylll",  "Monthly1@4", "prolificeffects@mail.com");
         System.out.print("Status is : " + res.getStatus());
     }
 }

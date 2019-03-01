@@ -49,6 +49,9 @@ public class AccountCreationService extends BaseClass {
         System.out.print(request);
         
         String response = this.getClient().request(request);
+        
+        //System.out.print(response);
+        
         StringReader reader = new StringReader(response);
         
         //initialize jaxb classes
