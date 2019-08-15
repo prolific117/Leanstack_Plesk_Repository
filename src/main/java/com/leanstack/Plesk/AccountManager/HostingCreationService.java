@@ -37,7 +37,7 @@ public class HostingCreationService extends BaseClass{
         super(service, login , password);
     }
     
-    public Result createHosting(String pleskId, String domainName, Date creationDate, String planName, String span, int duration) throws Exception{
+    public Result createHosting(String pleskId, String domainName, Date creationDate, String planName, String span, int duration, String login, String password) throws Exception{
         
         Map add = new HashMap();
         
@@ -55,12 +55,6 @@ public class HostingCreationService extends BaseClass{
         //hosting
         
         LinkedHashMap adminlogin = new LinkedHashMap();
-        String login = domainName.replaceAll("/[^A-Za-z0-9 ]/", domainName);
-        
-        if(login.length() > 6){
-            login = login.substring(0, 6)+pleskId;
-        }
-        
         adminlogin.put("name", "ftp_login");
         adminlogin.put("value", login);
         
@@ -68,7 +62,8 @@ public class HostingCreationService extends BaseClass{
         LinkedHashMap adminpassword = new LinkedHashMap();
         
         adminpassword.put("name", "ftp_password");
-        adminpassword.put("value", StrongPasswordGen.generatePassword());
+        //adminpassword.put("value", StrongPasswordGen.generatePassword());
+        adminpassword.put("value", password);
       
         LinkedHashMap ipAddress = new LinkedHashMap();
         ipAddress.put("ip_address", this.getKA_SERVICE());
@@ -118,9 +113,9 @@ public class HostingCreationService extends BaseClass{
             String response = this.getClient().request(request);
             StringReader reader = new StringReader(response);
             
-            //Scanner scanner = new Scanner(reader).useDelimiter("\\A");
-            //String str = scanner.hasNext() ? scanner.next() : "";
-            //System.out.print(str);
+            /*Scanner scanner = new Scanner(reader).useDelimiter("\\A");
+            String str = scanner.hasNext() ? scanner.next() : "";
+            System.out.print(str);*/
 
             //initialize jaxb classes
             JAXBContext context = JAXBContext.newInstance(SubscriptionCreationResponse.class);
@@ -128,6 +123,7 @@ public class HostingCreationService extends BaseClass{
             
             SubscriptionCreationResponse Data = (SubscriptionCreationResponse)un.unmarshal(reader);
         
+            //return null;
             return Data.getWebspace().getAdd().getResult();
         }
         catch(Exception ex){

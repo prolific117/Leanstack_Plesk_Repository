@@ -3,27 +3,30 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package PleskAccountCreationResponses;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author prolific
+ * @author olatunji.oduro
  */
- @XmlRootElement(name="add")
-    public class Add {
-        private Result result;  
+public class DomainsList {
 
-        public Result getResult() {
+        DomainsResult result;
+
+        public DomainsResult getResult() {
             return result;
         }
 
-        @XmlElement
-        public void setResult(Result result) {
+        public void setResult(DomainsResult result) {
             this.result = result;
         }
-
-
+         
+         
     }
+

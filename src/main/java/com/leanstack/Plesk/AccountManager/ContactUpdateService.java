@@ -52,6 +52,7 @@ public class ContactUpdateService extends BaseClass {
            customerData.put("email", email);
         
         
+        
         String request = "<packet version=\"1.6.7.0\">\n" +
                           "<customer>\n" +
                            "<set>\n" +

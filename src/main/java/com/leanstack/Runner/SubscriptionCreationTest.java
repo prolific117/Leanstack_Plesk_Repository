@@ -20,10 +20,10 @@ public class SubscriptionCreationTest {
         
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 
-        Date   date       = format.parse ( "2018-12-31" );  
+        Date   date = format.parse ( "2019-12-31" );  
 
-        HostingCreationService service = new HostingCreationService("45.77.89.231","admin","Lean@stack-123");
-        Result res = service.createHosting("47", "adedamolaelush.com", date ,  "Small Teams Monthly", "MONTHLY", 3);
+        HostingCreationService service = new HostingCreationService("206.189.123.56","admin","Admin@Leanstack-123");
+        Result res = service.createHosting("36", "adeddamolaeluhi.com", date ,  "Small Teams Monthly", "MONTHLY", 3,"baggbaroosa", "rrtt!33123ei4oiio");
         System.out.print("Status is : " + res.getStatus() + " error is "+ res.getErrtext());
     }
 }

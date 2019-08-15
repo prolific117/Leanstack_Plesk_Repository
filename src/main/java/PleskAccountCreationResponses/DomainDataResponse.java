@@ -6,13 +6,8 @@
 
 package PleskAccountCreationResponses;
 
-import com.thoughtworks.xstream.annotations.XStreamAlias;
-import java.util.ArrayList;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
@@ -21,18 +16,16 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @XmlRootElement(name="packet")
 @XmlAccessorType (XmlAccessType.FIELD)
-public class ServicePlanRetrievalResponse {
+public class DomainDataResponse {
     
-    @XmlElement(name="service-plan")
-    ServicePlan serviceplan;
+    DomainWebspace webspace;
 
-    public ServicePlan getServiceplan() {
-        return serviceplan;
+    public DomainWebspace getWebspace() {
+        return webspace;
     }
 
-    public void setServiceplan(ServicePlan serviceplan) {
-        this.serviceplan = serviceplan;
+    public void setWebspace(DomainWebspace webspace) {
+        this.webspace = webspace;
     }
-
     
 }

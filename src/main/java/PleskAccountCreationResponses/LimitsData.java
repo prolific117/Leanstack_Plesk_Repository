@@ -6,12 +6,9 @@
 
 package PleskAccountCreationResponses;
 
-import com.thoughtworks.xstream.annotations.XStreamAlias;
 import java.util.ArrayList;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -19,20 +16,32 @@ import javax.xml.bind.annotation.XmlRootElement;
  *
  * @author olatunji.oduro
  */
-@XmlRootElement(name="packet")
+@XmlRootElement(name="property")
 @XmlAccessorType (XmlAccessType.FIELD)
-public class ServicePlanRetrievalResponse {
+public class LimitsData {
     
-    @XmlElement(name="service-plan")
-    ServicePlan serviceplan;
+    @XmlElement(name="limit")
+    ArrayList<Limit> limits;
 
-    public ServicePlan getServiceplan() {
-        return serviceplan;
+    public ArrayList<Limit> getLimits() {
+        return limits;
     }
 
-    public void setServiceplan(ServicePlan serviceplan) {
-        this.serviceplan = serviceplan;
+    public void setLimits(ArrayList<Limit> limits) {
+        this.limits = limits;
     }
+
+    String overuse;
+
+    public String getOveruse() {
+        return overuse;
+    }
+
+    public void setOveruse(String overuse) {
+        this.overuse = overuse;
+    }
+    
+    
 
     
 }

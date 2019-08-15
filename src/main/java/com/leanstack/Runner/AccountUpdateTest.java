@@ -15,8 +15,8 @@ import com.leanstack.Plesk.AccountManager.ContactUpdateService;
  */
 public class AccountUpdateTest {
     public static void main(String[] args) throws Exception{
-        ContactUpdateService service = new ContactUpdateService("45.77.89.231","admin","Lean@stack-123");
-        service.updateCustomerContact("57 Jamaica Street", "Lekki", "Lagos", "olu.oduro@gmail.com", "NG", "100001", "olatunji17");
+        ContactUpdateService service = new ContactUpdateService("206.189.123.56","admin","Admin@Leanstack-123");
+        service.updateCustomerContact("57 Jamaica Street", "Lekki", "Lagos", "adedamola.elusakin@gmail.com", "NG", "100001", "switkim");
         //System.out.print("Status is : " + res.getStatus());
     }
 }

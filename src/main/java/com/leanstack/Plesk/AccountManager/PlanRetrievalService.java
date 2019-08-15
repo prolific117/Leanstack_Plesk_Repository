@@ -42,9 +42,9 @@ public class PlanRetrievalService extends BaseClass {
             String response = this.getClient().request(request);
             StringReader reader = new StringReader(response);
 
-            Scanner scanner = new Scanner(reader).useDelimiter("\\A");
-            //String str = scanner.hasNext() ? scanner.next() : "";
-            //System.out.print(str);
+            /*Scanner scanner = new Scanner(reader).useDelimiter("\\A");
+            String str = scanner.hasNext() ? scanner.next() : "";
+            System.out.print(str);*/
 
             //initialize jaxb classes
             JAXBContext context = JAXBContext.newInstance(ServicePlanRetrievalResponse.class);

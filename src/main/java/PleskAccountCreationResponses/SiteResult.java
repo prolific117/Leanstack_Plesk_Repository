@@ -6,12 +6,8 @@
 
 package PleskAccountCreationResponses;
 
-import com.thoughtworks.xstream.annotations.XStreamAlias;
-import java.util.ArrayList;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -19,20 +15,37 @@ import javax.xml.bind.annotation.XmlRootElement;
  *
  * @author olatunji.oduro
  */
-@XmlRootElement(name="packet")
+@XmlRootElement(name="result")
 @XmlAccessorType (XmlAccessType.FIELD)
-public class ServicePlanRetrievalResponse {
+public class SiteResult {
+    String status;
+    String id;
     
-    @XmlElement(name="service-plan")
-    ServicePlan serviceplan;
+    SiteGenInfo data;
+    
 
-    public ServicePlan getServiceplan() {
-        return serviceplan;
+    public String getStatus() {
+        return status;
     }
 
-    public void setServiceplan(ServicePlan serviceplan) {
-        this.serviceplan = serviceplan;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public SiteGenInfo getData() {
+        return data;
+    }
+
+    public void setData(SiteGenInfo data) {
+        this.data = data;
+    }
     
 }
